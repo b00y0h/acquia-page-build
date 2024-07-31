@@ -1,0 +1,74 @@
+---
+title: "Privacy";
+category: "General";
+
+import Layout from "@/layouts/Layout.astro";
+import { partnerData } from "@/data/partnerData.json";
+
+// will be replaced with the current year, at build time
+const year = new Date().getFullYear();
+---
+
+<Layout title="Privacy Policy">
+  <main role="main" class="lp-main page-main">
+    <section class="general-section">
+      <div class="center">
+        <div class="general-content">
+          <h3>Privacy Policy</h3>
+
+          <h4>Cookies</h4>
+
+          <p>
+            This website uses a "cookie," a small text file that is sent to your
+            computer when you first visit. The cookie is stored on your computer
+            and allows you to be recognized when you visit again later. We use
+            cookies to enhance your visits, most often by prefilling your name
+            and other information on forms you submit to us.
+          </p>
+
+          <p>
+            This website uses remarketing services, such as Google, Facebook and
+            Adroll, to advertise on third-party websites to previous visitors of
+            our site. Third-party vendors place cookies on users' browsers for
+            targeted advertising purposes and serve ads to locations such as the
+            Google search results page or any site in the Google Display Network
+            based on someone's past visits to the website.
+          </p>
+
+          <p>
+            Data such as identification of your internet browser or computer
+            operating system may be collected for targeted advertising. This
+            information is collected to track usage behavior and compile
+            aggregate data to facilitate content improvements. You may opt out
+            of Google's use of cookies by visiting <a
+              href="https://www.google.com/settings/u/0/ads/authenticated"
+              target="_blank">Google's Ads Settings</a
+            > and <a
+              href="http://www.networkadvertising.org/choices/"
+              target="_blank"
+              >opt out of the additional use of cookies by visiting this site</a
+            >.
+          </p>
+
+          <p>
+            You can <a
+              href={partnerData.privacyPolicyUrl}
+              id="link_privacy"
+              rel="noopener noreferrer"
+              target="_blank">view our complete privacy policy here</a
+            >.
+          </p>
+
+          <p class="copyright">
+            ©<span id="footer-year">{year}</span> EAB Global, Inc. Patent Pending.
+            All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+<!-- If user's browser handles js, then populate year with current year -->
+<script is:inline>
+  document.getElementById("footer-year").innerText = new Date().getFullYear();
+</script>

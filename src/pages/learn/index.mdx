@@ -1,0 +1,113 @@
+---
+title: "General"
+category: "Paid Search"
+---
+
+import { PARTNER_NAME } from "astro:env/client";
+import Form from "@/components/Form.astro";
+import PageIntro from "@/components/PageIntro.astro";
+
+import Layout from "@/layouts/Layout.astro";
+
+{/* // Global Tokens */}
+import SchoolContentStatic from "@/components/global/SchoolContentStatic.astro";
+import FeaturedPrograms from "@/components/global/FeaturedPrograms.astro";
+import Testimonials from "@/components/global/Testimonials.astro";
+
+<Layout title={frontmatter.title}>
+  <main role="main" class="lp-main page-main">
+    <div class="lp-initial">
+    <PageIntro>
+      <span class="em-up">Gain a Competitive Advantage</span> as a
+        Chartered Financial Analyst<sup>®</sup>
+    </PageIntro>
+
+      <section class="lp-intro-form" id="lp-intro-form">
+        <div class="center lp-intro-form-wrapper">
+          <div class="lp-intro-form-content">
+            <div class="lp-intro-astro">
+              <div class="lp-intro-copy">
+                <p>
+                  The Chartered Financial Analyst (CFA<sup>®</sup>) Program is
+                  designed to equip candidates with the knowledge and skills
+                  necessary to compete and excel in today’s complex and evolving
+                  investment industry.
+                </p>
+                <p>
+                  One of the most respected and sought-after designations in the
+                  global finance and investment worlds, the CFA designation can
+                  open doors to diverse career opportunities in investment
+                  management, financial analysis, and portfolio management. The
+                  CFA Program is typically completed by those with backgrounds
+                  in finance, accounting, economics, or business but with the
+                  evolution of the industry, more and more students with
+                  backgrounds in math, computer science and even liberal arts
+                  are joining the profession.
+                </p>
+                <p>
+                  The CFA Program is ideal for undergraduate students with 23
+                  months or fewer before graduating, candidates with a bachelors
+                  degree looking to pursue a career in finance or people looking
+                  to advance their career prospects as a financial advisor or
+                  investment banker.
+                </p>
+                <p>
+                  CFA charterholders are qualified to work in senior and
+                  executive positions as an investment banker, financial
+                  advisor, financial planner, and more.
+                </p>
+              </div>
+            </div>
+
+            <div class="lp-form">
+              <div class="lp-form-fields" id="form-form">
+                <Form formId="48" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="lp-callout" id="financial-times">
+        <div class="center">
+          <h4>
+            "Among the countries’ finance degrees around the world, the
+            Chartered Financial Analyst<sup>®</sup> qualification has become the
+            gold standard." – <i>Financial Times</i>
+          </h4>
+        </div>
+      </aside>
+      <SchoolContentStatic />
+      {/* <!-- {global-token=lp-school-content-static} --> */}
+
+      <div class="content-wrap">
+        <div class="center">
+          <FeaturedPrograms />
+          <Testimonials />
+          {/* <!-- {global-token=lp-featured-programs} -->
+          <!-- {global-token=lp-testimonials} --> */}
+        </div>
+      </div>
+
+      {/* <!-- {global-token=lp-stats-ps} --> */}
+
+      <section class="lp-intro-jump lp-initial">
+        <div class="center lp-intro-jump-wrapper">
+          <div class="lp-intro-jump-content">
+            <h4 class="lp-intro-jump-title">
+              Get More Information from CFA Institute
+            </h4>
+            <p>
+              Let us know how best to get in touch so we can share more about earning your CFA charter.
+            </p>
+            <p>
+              <a href="#lp-intro-form" class="button"
+                ><span class="link-wrap">Request Info</span></a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+</Layout>

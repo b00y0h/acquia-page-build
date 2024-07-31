@@ -1,0 +1,109 @@
+---
+title: "Thanks"
+category: "Paid Search"
+---
+
+import { PARTNER_NAME } from "astro:env/client";
+
+import Layout from "../../layouts/Layout.astro";
+
+{/* THANKS PAGE */}
+
+<Layout title={frontmatter.title}>
+  <main role="main" class="lp-main page-main">
+    <div class="lp-thanks-astro">
+      <section class="lp-page-intro">
+        <div class="center">
+          <div class="lp-intro">
+            <h2 class="lp-page-intro-title">
+              <span class="em-up">Thank You for Inquiring</span> About the CFA<sup>®</sup> Program!
+            </h2>
+            <p>
+              If you're ready to take the next step, we invite you to register
+              today!
+            </p>
+            <p>
+              <a href="{global-token=application-url}" class="button"
+                >Register Now</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-school">
+        <div class="content-wrap">
+          <div class="center">
+            <div class="lp-school-content-block">
+              <div class="copy-wrap">
+                <h4>A Program that Grows with You</h4>
+                <p>
+                  CFA Institute has extended CFA Program candidate eligibility
+                  by one year to include university students with two years
+                  remaining in their undergraduate studies.
+                </p>
+                <p>
+                  This policy change allows us to meet the expressed needs of
+                  student candidates, providing them with the opportunity to
+                  prepare for investment careers while also addressing industry
+                  demand for well-trained, ethical professionals.
+                </p>
+              </div>
+              <a
+                href="https://www.cfainstitute.org/en/programs/cfa"
+                target="_blank"
+                ><span class="link-wrap"><span class="icon-wrap">Explore Our CFA Program</span></span></a>
+            </div>
+
+            <aside class="lp-callout" id="gold-standard">
+              <div class="center">
+                <div class="lp-callout-content">
+                  <h4>The Gold Standard of Investment Credentials</h4>
+                  <p>
+                    CFA charterholders are qualified to work in senior and
+                    executive positions in investment management, risk
+                    management, asset management, and more.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-apply lp-apply-btm lp-thanks">
+        <div class="center lp-apply-wrapper">
+          <div class="lp-apply-content">
+            <div class="lp-apply-copy">
+              {/* <!-- {global-token=lp-apply-cta-intro} --> */}
+            </div>
+
+            <div class="apply-form lp-apply-form" id="apply-form">
+              {/* <!-- {form=54} --> */}
+            </div>
+
+            {/* <!-- {global-token=lp-form-privacy-notice} --> */}
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-school-contact lp-thanks">
+        <div class="center lp-school-wrapper">
+          <div class="lp-school-contact-info">
+            <div class="lp-school-contact-intro">
+              {/* <!-- {global-token=lp-contact-intro} --> */}
+              <ul class="lp-school-contact-options">
+                <li class="lp-school-contact-phone">
+                  {/* <!-- <a href="tel:{global-token=school-phone}">{global-token=school-phone}</a> --> */}
+                </li>
+                <li class="lp-school-contact-email">
+                  {/* <!-- <a href="mailto:{global-token=help-address}">{global-token=help-address}</a> --> */}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+</Layout>

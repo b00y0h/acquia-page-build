@@ -1,0 +1,29 @@
+---
+title: "Help";
+category: "General";
+
+import Layout from "@/layouts/Layout.astro";
+import { partnerData } from "@/data/partnerData.json";
+---
+
+<Layout title="Help">
+  <main role="main" class="lp-main page-main">
+    <section class="general-section">
+      <div class="center">
+        <div class="general-content">
+          <h2>Technical Help</h2>
+          <p>
+            If you require assistance in using this site, please contact the
+            Help Center at
+            <a
+              href=`mailto:${partnerData.contact.email}?subject=Help%20Request%20-%20${partnerData.name}CFA Institute%20(please%20keep%20this%20as%20your%20subject)`
+              target="_blank"
+              title={partnerData.contact.email}
+              rel="noopener">{partnerData.contact.email}</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

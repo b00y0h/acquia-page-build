@@ -1,0 +1,115 @@
+---
+import { PARTNER_NAME } from "astro:env/client";
+
+import Layout from "../layouts/Layout.astro";
+
+interface FrontMatter {
+  title: string;
+  category: string;
+}
+const pages = await Astro.glob<FrontMatter>("../pages/**/*.mdx");
+---
+
+<Layout title="`Learn More About ${PARTNER_NAME}`">
+  <main role="main" class="lp-main page-main">
+    <section class="general-section">
+      <div class="center">
+        <div class="general-content">
+          <h3>Page Links</h3>
+          <ul>
+            {
+              pages.map((page) => (
+                <li>
+                  <a href={page.url}>
+                    {page.frontmatter.category}: {page.frontmatter.title}
+                  </a>
+                </li>
+              ))
+            }
+
+            <div class="index-sj-container">
+              <h4>Student Journey</h4>
+              <ul>
+                <li>
+                  <a href="/apply">SJ - Apply</a> |
+                  <a href="/apply?utm_source=facebook">Facebook</a> |
+                  <a href="/apply?utm_source=linkedin">LinkedIn</a> |
+                  <a href="/apply?utm_source=google">Paid Search</a> |
+                  <small>Dynamic apply &amp; deadline forms</small>
+                </li>
+                <li>
+                  <a href="/explore">SJ - Explore</a> |
+                  <a href="/explore?utm_source=facebook">Facebook</a> |
+                  <a href="/explore?utm_source=linkedin">LinkedIn</a> |
+                  <a href="/explore?utm_source=google">Paid Search</a> |
+                  <small>Dynamic apply form</small>
+                </li>
+                <li>
+                  <a href="/request">SJ - Request</a> |
+                  <a href="/request?utm_source=facebook">Facebook</a> |
+                  <a href="/request?utm_source=linkedin">LinkedIn</a> |
+                  <a href="/request?utm_source=google">Paid Search</a> |
+                  <small>Dynamic apply &amp; survey forms</small>
+                </li>
+                <li>
+                  <a href="/request-thanks">SJ - Request (Thanks)</a> |
+                  <a href="/request-thanks?utm_source=facebook">Facebook</a> |
+                  <a href="/request-thanks?utm_source=linkedin">LinkedIn</a> |
+                  <small>Dynamic apply form</small>
+                </li>
+                <li>
+                  <a href="/guide">SJ - Guide</a> |
+                  <a href="/guide?utm_source=facebook">Facebook</a> |
+                  <a href="/guide?utm_source=linkedin">LinkedIn</a> |
+                  <a href="/guide?utm_source=google">Paid Search</a> |
+                  <small>Dynamic apply &amp; content give forms</small>
+                </li>
+                <li>
+                  <a href="/guide-thanks">SJ - Guide (Thanks)</a>
+                </li>
+                <li><a href="/not-ready">SJ - Not Ready</a></li>
+              </ul>
+            </div>
+
+            <div class="index-ps-container">
+              <h4>Paid Search</h4>
+              <ul>
+                <li><a href="/learn">PS - General</a></li>
+                <li>
+                  <a href="/learn?thanks=true">PS - General (Thanks)</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- <div class="index-diq-container">
+               <h4>DIQ</h4>
+               <ul>
+                  <li><a href="/diq-landing">DIQ - Landing</a></li>
+                  <li><a href="/diq-yes">DIQ - Yes</a></li>
+                  <li><a href="/diq-probably">DIQ - Probably</a></li>
+                  <li><a href="/diq-maybe">DIQ - Maybe</a></li>
+                  <li><a href="/diq-maybe-thanks">DIQ - Maybe (Thanks)</a></li>      
+                  <li><a href="/diq-deferred">DIQ - Deferred</a></li>
+                  <li><a href="/diq-deferred-thanks">DIQ - Deferred (Thanks)</a></li>
+                  <li><a href="/diq-no">DIQ - No</a></li>
+                  <li><a href="/diq-no-thanks">DIQ - No (Thanks)</a></li>
+                  <li><a href="/diq-already-did">DIQ - Already Did</a></li>
+               </ul>
+            </div> -->
+
+            <div class="index-other-container">
+              <h4>Other</h4>
+              <ul>
+                <li>
+                  <a href="/page/preview/25">Preference Center</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style></style>
+</Layout>

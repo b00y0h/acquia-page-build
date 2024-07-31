@@ -1,0 +1,9 @@
+---
+interface Props {
+  formId: string
+}
+
+const { formId } = Astro.props
+---
+
+<script type="text/javascript" src=`//go.explore.cfainstitute.org/form/generate.js?id=${formId}`></script>

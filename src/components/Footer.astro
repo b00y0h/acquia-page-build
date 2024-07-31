@@ -1,0 +1,84 @@
+---
+import { partnerData } from "@/data/partnerData.json";
+import { navLinks } from "@/data/navData.json";
+---
+
+<footer role="contentinfo">
+  <div class="school-footer-wrapper center">
+    <div class="school-footer-content">
+      <div class="school-footer-name">{partnerData.name}</div>
+
+      <address class="school-footer-address">
+        {partnerData.address.street}<br />
+        {partnerData.address.city}, {partnerData.address.state}
+        {partnerData.address.zip}
+      </address>
+    </div>
+
+    <ul>
+      {
+        navLinks.footerNav.map((link) => (
+          <li>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: #666;
+    padding: 1.5rem 0;
+  }
+
+  @media (min-width: 18.75rem) {
+    footer {
+      padding: calc(1.33333rem + 0.88889vw) 0;
+    }
+  }
+
+  @media (min-width: 75rem) {
+    footer {
+      padding: 2rem 0;
+    }
+  }
+
+  .school-footer-content {
+    color: #fff;
+    text-align: center;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  ul li {
+    display: inline-block;
+    font-size: 0.9em;
+    list-style-type: none;
+  }
+
+  ul li ~ li {
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  ul li ~ li:before {
+    border-left: 1px solid #fff;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    margin-right: 0.5rem;
+    position: absolute;
+  }
+
+  ul li a {
+    color: #fff;
+  }
+</style>
