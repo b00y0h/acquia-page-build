@@ -1,19 +1,14 @@
 ---
-interface Props {
-  GTM_ID: string;
-}
-
-const { GTM_ID } = Astro.props;
+import { GTM_ID } from "astro:env/client";
 ---
 
-<!-- Google Tag Manager -->
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
   }
 </script>
-<script is:inline>
+<script is:inline define:vars={{ GTM_ID }}>
   (function (w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -23,7 +18,5 @@ const { GTM_ID } = Astro.props;
     j.async = true;
     j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
     f.parentNode.insertBefore(j, f);
-  })(window, document, "script", "dataLayer", `${GTM_ID}`);
+  })(window, document, "script", "dataLayer", GTM_ID);
 </script>
-
-<!-- End Google Tag Manager -->
