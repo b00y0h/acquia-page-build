@@ -10,20 +10,25 @@ export default defineConfig({
         PARTNER_ID: envField.string({
           context: "client",
           access: "public",
-          optional: false
+          optional: false,
         }),
         PROJECT_TYPE: envField.string({
           context: "client",
           access: "public",
-          optional: false
+          optional: false,
         }),
         PARTNER_NAME: envField.string({
           context: "client",
           access: "public",
-          optional: false
-        })
-      }
-    }
+          optional: false,
+        }),
+        GTM_ID: envField.string({
+          context: "client",
+          access: "public",
+          optional: false,
+        }),
+      },
+    },
   },
-  integrations: [mdx()]
+  integrations: [mdx()],
 });
