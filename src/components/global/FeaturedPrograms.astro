@@ -1,13 +1,13 @@
 ---
 import { Image } from "astro:assets";
 
-import Img from "@/images/img-woman-laptop.jpg";
+import whatever from "@/images/img-woman-laptop.jpg";
 ---
 
-<section class="lp-program-astro">
+<section>
   <div class="center">
     <div class="lp-program-content">
-      <Image src={Img} alt="Woman looking at camera" />
+      <Image src={whatever} alt="Woman looking at camera" />
       <h4 class="lp-callout-title">Badging Program</h4>
 
       <p>
@@ -26,27 +26,30 @@ import Img from "@/images/img-woman-laptop.jpg";
   </div>
 </section>
 <style>
-  .lp-program-astro .lp-program-content {
+  section {
+    background-color: red;
+  }
+  .lp-program-content {
     background: #002f6c;
     padding: 1.25rem 1.5rem;
   }
 
-  .lp-program-astro .lp-program-content a,
-  .lp-program-astro .lp-program-content a:focus,
-  .lp-program-astro .lp-program-content a:hover,
-  .lp-program-astro .lp-program-content address,
-  .lp-program-astro .lp-program-content div,
-  .lp-program-astro .lp-program-content h1,
-  .lp-program-astro .lp-program-content h2,
-  .lp-program-astro .lp-program-content h3,
-  .lp-program-astro .lp-program-content h4,
-  .lp-program-astro .lp-program-content h5,
-  .lp-program-astro .lp-program-content h6,
-  .lp-program-astro .lp-program-content label,
-  .lp-program-astro .lp-program-content li,
-  .lp-program-astro .lp-program-content p,
-  .lp-program-astro .lp-program-content span,
-  .lp-program-astro .lp-program-content ul {
+  a,
+  a:focus,
+  a:hover,
+  address,
+  div,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label,
+  li,
+  p,
+  span,
+  ul {
     color: #fff;
   }
 </style>
