@@ -9,7 +9,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import ALRScripts from "@/components/ALRScripts.astro";
 
-import { PARTNER_ID, PROJECT_TYPE, GTM_ID } from "astro:env/client";
+import { GTM_ID } from "astro:env/client";
 
 interface Props {
   title: string;
@@ -27,8 +27,9 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- <link rel="preconnect" href="https://p.typekit.net" crossorigin />
     <link rel="preconnect" href="https://use.typekit.net" crossorigin />
     <link rel="preload" as="style" href="https://use.typekit.net/fim8cbh.css" />
     <link
@@ -36,12 +37,7 @@ const { title, description } = Astro.props;
       href="https://use.typekit.net/fim8cbh.css"
       media="print"
       onload="this.media='all'"
-    />
-
-    <link
-      href=`https://admiss.info/assets/lp-live/${PARTNER_ID}/${PROJECT_TYPE}/styles.css`
-      rel="stylesheet"
-    />
+    /> -->
   </head>
   <body>
     <noscript>
