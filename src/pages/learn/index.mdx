@@ -6,6 +6,9 @@ category: "Paid Search"
 import { PARTNER_NAME } from "astro:env/client";
 import Form from "@/components/Form.astro";
 import PageIntro from "@/components/PageIntro.astro";
+import { Image } from "astro:assets";
+
+import InterviewImage from "@/images/img-interview.jpg";
 
 import Layout from "@/layouts/Layout.astro";
 
@@ -17,7 +20,7 @@ import Testimonials from "@/components/global/Testimonials.astro";
 <Layout title={frontmatter.title} description={frontmatter.category}>
   <main role="main" class="lp-main page-main">
     <div class="lp-initial">
-    <PageIntro>
+    <PageIntro image={InterviewImage}>
       <span class="em-up">Gain a Competitive Advantage</span> as a
         Chartered Financial Analyst<sup>®</sup>
     </PageIntro>

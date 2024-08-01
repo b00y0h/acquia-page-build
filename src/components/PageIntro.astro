@@ -2,6 +2,12 @@
 import { Image } from "astro:assets";
 
 import InterviewImage from "@/images/img-interview.jpg";
+
+interface Props {
+  Img: string;
+}
+
+const { Img } = Astro.props;
 ---
 
 <section class="lp-page-intro-astro">
