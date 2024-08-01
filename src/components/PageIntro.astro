@@ -1,16 +1,28 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
-import InterviewImage from "../images/img-interview.jpg";
+import InterviewImage from "@/images/img-interview.jpg";
 ---
 
-<section class="lp-page-intro">
+<section class="lp-page-intro-astro">
   <div class="center">
     <div class="lp-intro-astro">
       <h2 class="lp-page-intro-title">
         <slot />
-        <Picture src={InterviewImage} alt="A bird sitting on a nest of eggs." />
+        <Image
+          src={InterviewImage}
+          alt="A woman being interviews"
+          loading="eager"
+        />
       </h2>
     </div>
   </div>
 </section>
+<style>
+  .lp-page-intro-astro > .center {
+    grid-gap: 4rem;
+    display: grid;
+    grid-template: 1fr/1fr 1fr;
+    max-width: 68.75rem;
+  }
+</style>

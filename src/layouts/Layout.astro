@@ -23,10 +23,36 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin />
+    <link rel="preload" as="style" href="https://use.typekit.net/fim8cbh.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/fim8cbh.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
     <link
       href=`https://admiss.info/assets/lp-live/${PARTNER_ID}/${PROJECT_TYPE}/styles.css`
       rel="stylesheet"
     />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TBZB7L8C");
+    </script>
+
+    <!-- End Google Tag Manager -->
   </head>
   <body>
     <div class="page-wrap">
@@ -34,6 +60,13 @@ const { title, description } = Astro.props;
       <slot />
     </div>
     <Footer />
+    <script src="https://admiss.info/acquia-template/alr-plugins.js" defer
+    ></script>
+    <script src="https://admiss.info/acquia-template/alr-global.js" defer
+    ></script>
+    <script
+      src="https://admiss.info/acquia-template/alr-landing-page-v2.0-migrated-min.js"
+      defer></script>
   </body>
 </html>
 <style is:global>
