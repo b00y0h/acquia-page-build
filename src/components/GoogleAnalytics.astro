@@ -2,12 +2,6 @@
 import { GTM_ID } from "astro:env/client";
 ---
 
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-</script>
 <script is:inline define:vars={{ GTM_ID }}>
   (function (w, d, s, l, i) {
     w[l] = w[l] || [];
