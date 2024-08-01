@@ -1,9 +1,10 @@
 ---
+import { ACS_URL } from "astro:env/client";
 interface Props {
-  formId: string
+  formId: string;
 }
 
-const { formId } = Astro.props
+const { formId } = Astro.props;
 ---
 
-<script type="text/javascript" src=`//go.explore.cfainstitute.org/form/generate.js?id=${formId}`></script>
+<script is:inline src=`//${ACS_URL}/form/generate.js?id=${formId}`></script>

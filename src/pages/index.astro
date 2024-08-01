@@ -1,6 +1,4 @@
 ---
-import { PARTNER_NAME } from "astro:env/client";
-
 import Layout from "../layouts/Layout.astro";
 
 interface FrontMatter {
@@ -10,7 +8,7 @@ interface FrontMatter {
 const pages = await Astro.glob<FrontMatter>("../pages/**/*.mdx");
 ---
 
-<Layout title="`Learn More About ${PARTNER_NAME}`">
+<Layout title="Learn More">
   <main role="main" class="lp-main page-main">
     <section class="general-section">
       <div class="center">

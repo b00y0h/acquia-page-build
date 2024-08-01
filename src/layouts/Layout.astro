@@ -6,6 +6,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
 
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import ALRScripts from "@/components/ALRScripts.astro";
 
 import { PARTNER_ID, PROJECT_TYPE, GTM_ID } from "astro:env/client";
 
@@ -23,7 +24,7 @@ const { title, description } = Astro.props;
     <GoogleAnalytics />
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <meta name="description" content="Description of the page" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://p.typekit.net" crossorigin />
@@ -56,13 +57,7 @@ const { title, description } = Astro.props;
       <slot />
     </div>
     <Footer />
-    <script src="https://admiss.info/acquia-template/alr-plugins.js" defer
-    ></script>
-    <script src="https://admiss.info/acquia-template/alr-global.js" defer
-    ></script>
-    <script
-      src="https://admiss.info/acquia-template/alr-landing-page-v2.0-migrated-min.js"
-      defer></script>
+    <ALRScripts />
   </body>
 </html>
 <style is:global>

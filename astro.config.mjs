@@ -7,6 +7,11 @@ export default defineConfig({
   experimental: {
     env: {
       schema: {
+        ACS_URL: envField.string({
+          context: "client",
+          access: "public",
+          optional: false,
+        }),
         PARTNER_ID: envField.string({
           context: "client",
           access: "public",
